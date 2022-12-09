@@ -306,46 +306,6 @@ Her følger fire eksempler på tema dere kan, men ikke nødvendigvis må velge. 
 
 I besvarelsen skal dere forklare hvorfor dataene er relevante og gi en grundig beskrivelse av deres utvikling. Lengden på besvarelsen skal være på 750 - 1500 ord.
 
-```{r}
-library(tidyverse)
-
-url <- 'https://github.com/johannesnp/SOK-1004-Prosjekt/raw/main/Arbeidsledighet_data.xlsx'
-
-arbeidsledighet_1920 <- read.xlsx(url)
-
-naringer = c("Uoppgitt","Ikke yrkesaktive","Yrkesaktive1")
-
-arbeidsledighet_1920 <- arbeidsledighet_1920 %>% 
-  filter(Næring %in% naringer)
-
-arbeidsledighet_1920 %>% 
-  ggplot(aes(Næring,verdi))+
-  geom_bar(stat = "identity")+
-  xlab("")+
-  ylab("Antall personer")+
-  ggtitle("Antall yrkesaktive personer i 1920")+
-  labs(caption = "Kilde 5: Tabell 9.1, Historisk statistikk 1994, Statistisk Sentralbyrå")+
-  theme_bw()
-
-```
-
-```{r}
-url <- 'https://github.com/johannesnp/SOK-1004-Prosjekt/raw/main/Utla%CC%8An%20Statistikk.xlsx'
-
-df_utlån <- read.xlsx(url)
-
-df_utlån %>% 
-  ggplot(aes(År,Verdi))+
-  geom_point()+
-  geom_line()+
-  labs(title = "Kronebeløp i lån fra sparebanker (i millioner)",
-       caption = "Kilde 6: Tabell 24.9, Historisk statistikk 1994, Statistisk Sentralbyrå")+
-  ylab("Kroner i millioner")+
-  xlab("Tid (År)")+
-  theme_bw()
-  
-```
-
 I denne oppgaven har jeg valgt å se nærmere på hvordan den økonomiske krisen påvirket arbeidsledigheten, samt kredittvirksomheten hos bankene i Norge fra 1920 til 1930. 
 
 ### Arbeidsledigheten stiger
