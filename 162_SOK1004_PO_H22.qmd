@@ -118,7 +118,7 @@ df_gini %>%
   geom_smooth() +
   ylim(0.25,0.75) +
   theme_bw() +
-  xlim(1990,2017)+
+  xlim(1920,1930)+
   labs(title = "Gini-koeffisienter for inntektsfordelingen i Norge",
        subtitle = "1875–2017. Gjennomsnitt av øvre og nedre grense.",
        y="Gini-koeffisient",
