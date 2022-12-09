@@ -12,7 +12,7 @@ output: true
 editor: visual
 ---
 
-**GitHub link:**
+**GitHub link: https://github.com/johannesnp/SOK-1004-Prosjekt**
 
 **Even Hvinden**
 
